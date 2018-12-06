@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from flask import Flask, request, jsonify, Response, json
 from Calcul import Calcul
 app = Flask(__name__)
@@ -55,3 +57,6 @@ def division():
     calc.doOperation('/')
     result = calc.getResults()
     return result
+
+if __name__ == '__main__':
+ app.run(host="0.0.0.0", port=8080)
